@@ -13,10 +13,10 @@ kaboom({
 // loadSprite('monster', 'monster.png')
 // loadSprite('brick', 'brick.png')
 // loadSprite('block', 'https://i.imgur.com/FGd5ekd.jpg');
-loadSprite('block', 'models/grass.png');
-// loadSprite('player10', 'https://i.imgur.com/TsPXL5Y.png')
-// loadSprite('player20', 'https://i.imgur.com/M8DkmiA.png')
-// loadSprite('player30', 'https://i.imgur.com/B2vGh5v.png')
+loadSprite('block', 'https://i.imgur.com/oguSX26.jpg');
+loadSprite('player10', 'https://i.imgur.com/sCID4aw.png')
+loadSprite('player20', 'https://i.imgur.com/B2vGh5v.png')
+loadSprite('player30', 'https://i.imgur.com/sCID4aw.png')
 // loadSprite('player40', 'https://i.imgur.com/zSQq2y4.png')
 
 // loadSprite('mushroom', 'mushroom.png')
@@ -43,7 +43,7 @@ scene("game", () => {
     const levelCfg = {
         width: 50,
         height: 50,
-        '=': [sprite('block'), solid(),]
+        '=': [sprite('block'), solid(), scale(2)]
     }
 
     const gameLevel = addLevel(map, levelCfg)
@@ -52,6 +52,7 @@ scene("game", () => {
         sprite('player10'),
         pos(30,0),
         body(),
+        
        
     ])
 
@@ -68,5 +69,7 @@ scene("game", () => {
         }
     }) 
 })
+
+
 
 start('game');
