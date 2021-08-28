@@ -13,8 +13,8 @@ loadRoot('https://raw.githubusercontent.com/kesavvvvv/kesavvvvv.github.io/master
 // // loadSprite('monster', 'monster.png')
 // // loadSprite('brick', 'brick.png')
 // // loadSprite('block', 'https://i.imgur.com/FGd5ekd.jpg');
-loadSprite('grass', 'grass.jpg');
-loadSprite('dirt', 'dirt.jpg');
+loadSprite('grass', 'grass.png');
+loadSprite('dirt', 'dirt.png');
 loadSprite('player10', 'models/player/run/run0.png')
 loadSprite('player20', 'models/player/run/run1.png')
 loadSprite('player30', 'models/player/run/run2.png')
@@ -25,6 +25,18 @@ loadSprite('player70', 'models/player/run/run6.png')
 loadSprite('player80', 'models/player/run/run7.png')
 loadSprite('player90', 'models/player/run/run8.png')
 loadSprite('player100', 'models/player/run/run9.png')
+
+loadSprite('slide10', 'models/player/slide/slide0.png')
+loadSprite('slide20', 'models/player/slide/slide1.png')
+loadSprite('slide30', 'models/player/slide/slide2.png')
+loadSprite('slide40', 'models/player/slide/slide3.png')
+loadSprite('slide50', 'models/player/slide/slide4.png')
+loadSprite('slide60', 'models/player/slide/slide5.png')
+loadSprite('slide70', 'models/player/slide/slide6.png')
+loadSprite('slide80', 'models/player/slide/slide7.png')
+loadSprite('slide90', 'models/player/slide/slide8.png')
+loadSprite('slide100', 'models/player/slide/slide9.png')
+
 // loadSprite('player10', 'https://i.imgur.com/sCID4aw.png')
 // loadSprite('grass', 'https://i.imgur.com/iUKRS2B.png')
 // loadSprite('dirt', 'https://i.imgur.com/kfVKDva.png')
@@ -79,19 +91,35 @@ scene("game", () => {
         
        
     ])
-
-    var i = 2
+    var slide = 2
+    keyDown("down", () => {
+        if (keyIsDown("right")) {
+            player.move(500, 0)
+            if(slide%10 == 0)
+            player.changeSprite('slide' + slide)
+            if(slide<100){
+                slide = slide + 1
+            }
+            else {
+                slide = 1
+            }
+        } else {
+            // TODO
+        }
+    })
+    var run = 2
     keyDown('right', () => {
         player.move(250, 0)
-        if(i%10 == 0)
-            player.changeSprite('player' + i)
-        if(i<100){
-            i = i + 1
+        if(run%10 == 0)
+            player.changeSprite('player' + run)
+        if(run<100){
+            run = run + 1
         }
         else {
-            i=1
+            run=1
         }
     }) 
+    
 })
 
 
