@@ -6,15 +6,18 @@ kaboom({
     clearColor: [0, 0, 0, 1],
 });
 
+
+
 // loadRoot('models/')
-loadSprite('coin', 'https://i.imgur.com/vNCUro5.png');
+// loadSprite('coin', 'https://i.imgur.com/vNCUro5.png');
 // loadSprite('monster', 'monster.png')
 // loadSprite('brick', 'brick.png')
-loadSprite('block', 'https://i.imgur.com/FGd5ekd.jpg');
-loadSprite('player10', 'https://i.imgur.com/TsPXL5Y.png')
-loadSprite('player20', 'https://i.imgur.com/M8DkmiA.png')
-loadSprite('player30', 'https://i.imgur.com/B2vGh5v.png')
-loadSprite('player40', 'https://i.imgur.com/zSQq2y4.png')
+// loadSprite('block', 'https://i.imgur.com/FGd5ekd.jpg');
+loadSprite('block', 'models/grass.png');
+// loadSprite('player10', 'https://i.imgur.com/TsPXL5Y.png')
+// loadSprite('player20', 'https://i.imgur.com/M8DkmiA.png')
+// loadSprite('player30', 'https://i.imgur.com/B2vGh5v.png')
+// loadSprite('player40', 'https://i.imgur.com/zSQq2y4.png')
 
 // loadSprite('mushroom', 'mushroom.png')
 // loadSprite('pipe-top-left', 'block.png')
@@ -63,23 +66,7 @@ scene("game", () => {
         else {
             i=1
         }
-    })
-
-   
+    }) 
 })
-
-
-    // addLevel([
-    //     '    ',
-    //     '    ',
-    //     '    ',
-    //     '    ',
-    //     '    ',
-    //     'xxxx'
-    // ], {
-    //     width: 20,
-    //     height: 20,
-    //     'x': [sprite('block')]
-    // });
 
 start('game');
