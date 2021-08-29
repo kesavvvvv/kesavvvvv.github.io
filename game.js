@@ -1,3 +1,4 @@
+//Initialize kaboom.js
 kaboom({
     global: true,
     fullscreen: true,
@@ -6,26 +7,26 @@ kaboom({
     clearColor: [0, 0, 0, 1],
 });
 
-
-
+//Setting root location to get sprite from github
 loadRoot('https://raw.githubusercontent.com/kesavvvvv/kesavvvvv.github.io/master/assets/')
-// // loadSprite('coin', 'https://i.imgur.com/vNCUro5.png');
-// // loadSprite('monster', 'monster.png')
-// // loadSprite('brick', 'brick.png')
-// // loadSprite('block', 'https://i.imgur.com/FGd5ekd.jpg');
+
+//Load Sprites for base floor 
 loadSprite('grass', 'grass.png');
 loadSprite('dirt', 'dirt.png');
-loadSprite('player10', 'models/player/run/run0.png')
-loadSprite('player20', 'models/player/run/run1.png')
-loadSprite('player30', 'models/player/run/run2.png')
-loadSprite('player40', 'models/player/run/run3.png')
-loadSprite('player50', 'models/player/run/run4.png')
-loadSprite('player60', 'models/player/run/run5.png')
-loadSprite('player70', 'models/player/run/run6.png')
-loadSprite('player80', 'models/player/run/run7.png')
-loadSprite('player90', 'models/player/run/run8.png')
-loadSprite('player100', 'models/player/run/run9.png')
 
+//Load Sprites for player running animation
+loadSprite('run10', 'models/player/run/run0.png')
+loadSprite('run20', 'models/player/run/run1.png')
+loadSprite('run30', 'models/player/run/run2.png')
+loadSprite('run40', 'models/player/run/run3.png')
+loadSprite('run50', 'models/player/run/run4.png')
+loadSprite('run60', 'models/player/run/run5.png')
+loadSprite('run70', 'models/player/run/run6.png')
+loadSprite('run80', 'models/player/run/run7.png')
+loadSprite('run90', 'models/player/run/run8.png')
+loadSprite('run100', 'models/player/run/run9.png')
+
+//Load Sprites for player sliding animation
 loadSprite('slide10', 'models/player/slide/slide0.png')
 loadSprite('slide20', 'models/player/slide/slide1.png')
 loadSprite('slide30', 'models/player/slide/slide2.png')
@@ -37,22 +38,56 @@ loadSprite('slide80', 'models/player/slide/slide7.png')
 loadSprite('slide90', 'models/player/slide/slide8.png')
 loadSprite('slide100', 'models/player/slide/slide9.png')
 
-// loadSprite('player10', 'https://i.imgur.com/sCID4aw.png')
-// loadSprite('grass', 'https://i.imgur.com/iUKRS2B.png')
-// loadSprite('dirt', 'https://i.imgur.com/kfVKDva.png')
-
-
-
 // loadSprite('mushroom', 'mushroom.png')
 // loadSprite('pipe-top-left', 'block.png')
 // loadSprite('pipe-top-right', 'brick.png')
 // loadSprite('pipe-bottom-left', 'block.png')
 // loadSprite('pipe-bottom-right', 'block.png')
 
+// loadSprite('road', 'https://i.imgur.com/Y3F7ruJ.png')
+// loadSprite('road1', 'https://i.imgur.com/QEUHw9P.png')
+const speed = 90;
+let speedMod = 1;
+
+//Home Page
+scene("home", () => {
+    layers(['bg', 'obj', 'ui'], 'obj')
+    add([
+        text("Hi! Welcome to my website.", 32), 
+        origin('center'),
+        pos(width()/2, height()/2)
+    ])
+
+    // const background = add([
+    //     sprite('bg10'),
+    //     pos(0,0),
+    //     layer('bg')
+        
+    // ])
+
+    // var worker = new Worker("worker.js")
+
+    // worker.postMessage("test")
+
+    // worker.addEventListener("message", event => {
+    //     if (event.data) {
+    //       go('game')
+    //     }
+    // })
+
+    mouseClick(() => {
+        go('game')
+    })
+    
+    
+})
+
+//Game Page
 scene("game", () => {
     layers(['bg', 'obj', 'ui'], 'obj')
     
-   
+    
+
     const map = [
         '                               ',
         '                               ',
@@ -64,36 +99,43 @@ scene("game", () => {
         '                               ',
         '                               ',
         '                               ', 
-        '==========   ==================',
-        '----------   ------------------'
+        '============  =================',
+        '------------  -----------------'
     ]
 
     const levelCfg = {
         width: 99,
         height: 87,
         '=': [
-            sprite('grass'),
-                
+            sprite('grass'),     
         ],
         '-': [
             sprite('dirt'),
             solid(),  
-        ]
-        
+        ]   
     }
 
     const gameLevel = addLevel(map, levelCfg)
 
     const player = add([
-        sprite('player10'),
+        sprite('run10'),
         pos(30,0),
-        body(),
-        
-       
+        body(), 
     ])
+
+    //Press q to go back to home screen
+    keyPress('q', () => {
+        go("home")
+    })
+
+    // camera position follow player
+    player.action(() => {
+        camPos(player.pos);
+    });
+
     var slide = 2
-    keyDown("down", () => {
-        if (keyIsDown("right")) {
+    keyDown("shift", () => {
+        if (keyIsDown("right") || mouseIsDown()) {
             player.move(500, 0)
             if(slide%10 == 0)
             player.changeSprite('slide' + slide)
@@ -107,11 +149,24 @@ scene("game", () => {
             // TODO
         }
     })
+
+    //Mobile 
+    //Swipe up on mobile for jump.
+    mouseClick(() => {  
+        yClick = mousePos().y
+        mouseRelease(() => {
+            yRelease = mousePos().y
+            if(yRelease < yClick - 350) {
+                player.jump()
+            }
+        })
+    })
+
     var run = 2
     keyDown('right', () => {
         player.move(250, 0)
         if(run%10 == 0)
-            player.changeSprite('player' + run)
+            player.changeSprite('run' + run)
         if(run<100){
             run = run + 1
         }
@@ -119,9 +174,20 @@ scene("game", () => {
             run=1
         }
     }) 
-    
+
+    var run = 2
+    mouseDown(() => {
+        player.move(250, 0)
+        if(run%10 == 0)
+            player.changeSprite('run' + run)
+        if(run<100){
+            run = run + 1
+        }
+        else {
+            run=1
+        }
+    })
 })
 
-
-
-start('game');
+//Start the website
+start('home');
