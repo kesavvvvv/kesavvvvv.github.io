@@ -10,7 +10,7 @@ kaboom({
 
 //Import all scenes
 import Home from './src/scenes/home.js'
-import SpritesInit from './src/sprites.js'
+import SpritesInit from './src/components/sprites.js'
 import Game from './src/scenes/game.js'
 
 //Initialize all Sprites

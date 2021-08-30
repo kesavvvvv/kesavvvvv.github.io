@@ -31,6 +31,35 @@ export default function SpritesInit() {
     loadSprite('slide90', 'models/player/slide/slide8.png')
     loadSprite('slide100', 'models/player/slide/slide9.png')
 
+    //Load Sprite for player idle
+    loadSprite('idle10', 'models/player/idle/idle0.png')
+    loadSprite('idle20', 'models/player/idle/idle1.png')
+    loadSprite('idle30', 'models/player/idle/idle2.png')
+    loadSprite('idle40', 'models/player/idle/idle3.png')
+    loadSprite('idle50', 'models/player/idle/idle4.png')
+    loadSprite('idle60', 'models/player/idle/idle5.png')
+    loadSprite('idle70', 'models/player/idle/idle6.png')
+    loadSprite('idle80', 'models/player/idle/idle7.png')
+    loadSprite('idle90', 'models/player/idle/idle8.png')
+    loadSprite('idle100', 'models/player/idle/idle9.png')
+
+    loadSprite('cloud1', 'models/clouds/cloud1.png')
+    loadSprite('cloud2', 'models/clouds/cloud2.png')
+    loadSprite('cloud3', 'models/clouds/cloud3.png')
+    loadSprite('cloud4', 'models/clouds/cloud4.png')
+    loadSprite('cloud5', 'models/clouds/cloud5.png')
+    loadSprite('cloud6', 'models/clouds/cloud6.png')
+
+    function padLeft(nr, n, str){
+        return Array(n-String(nr).length+1).join(str||'0')+nr;
+    }
+
+    var i=0
+    while(i<108) {
+        loadSprite('bg' + i, 'home/frame_' + padLeft(i, 3).toString() + '_delay-0.06s.png')
+        i += 1
+    }
+
     // loadSprite('mushroom', 'mushroom.png')
     // loadSprite('pipe-top-left', 'block.png')
     // loadSprite('pipe-top-right', 'brick.png')

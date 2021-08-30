@@ -1,38 +1,16 @@
+import Clouds from '../components/clouds.js'
+import Map from '../components/map.js'
+import Player, {player} from '../components/playeractions.js'
+
 export default function Level() {
     layers(['bg', 'obj', 'ui'], 'obj')
    
-    const map = [
-        '                               ',
-        '                               ',
-        '                               ',
-        '                               ',
-        '                               ',
-        '                               ', 
-        '============  =================',
-        '------------  -----------------'
-    ]
+    //Initialize Map
+    Map()
 
-    const levelCfg = {
-        width: 99,
-        height: 87,
-        '=': [
-            sprite('grass'),     
-        ],
-        '-': [
-            sprite('dirt'),
-            solid(),  
-            area()
-        ]   
-    }
+    Player()
 
-    const gameLevel = addLevel(map, levelCfg)
-
-    const player = add([
-        sprite('run10'),
-        pos(30,0),
-        body(), 
-        area()
-    ])
+    Clouds()
 
     const bg1 = add([
         pos(vec2(100, 100)),
@@ -67,10 +45,10 @@ export default function Level() {
         go("home")
     })
 
-    // camera position follow player
-    player.action(() => {
-        camPos(player.pos);
-    });
+    
+ 
+    var idle = 2
+    console.log(keyPress())
 
     var slide = 2
     keyDown("shift", () => {
@@ -90,65 +68,5 @@ export default function Level() {
         }
     })
 
-    // Mobile 
-    // Swipe up on mobile for jump.
-    var yClick = 0
-    var yRelease = 0
-    mouseClick(() => {  
-        yClick = mousePos().y
-        mouseRelease(() => {
-            yRelease = mousePos().y
-            if(yRelease < yClick - 350) {
-                player.jump()
-            }
-        })
-    })
-
-    mouseClick(() => { 
-        // console.log(mousePos())
-        if(mousePos().x>70 && mousePos().x<130 && mousePos().y>85 && mousePos().y<115) {
-            console.log(player.pos)
-            player.jump()
-        }
-    })
-
-    // mouseClick(() => {  
-    //     // yClick = mousePos().y
-    //     console.log(mousePos().y)
-    //     mouseRelease(() => {
-    //         console.log(mousePos().y)
-    //         // yRelease = mousePos().y
-    //         // if(yRelease < yClick - 350) {
-    //         //     player.jump()
-    //         // }
-    //     })
-    // })
-
-    var run = 2
-    keyDown('right', () => {
-        player.move(250, 0)
-        if(run%10 == 0)
-            player.use(sprite('run' + run))
-            // player.changeSprite('run' + run)
-        if(run<100){
-            run = run + 1
-        }
-        else {
-            run = 1
-        }
-    }) 
-
-    var run = 2
-    mouseDown(() => {
-        player.move(250, 0)
-        if(run%10 == 0)
-            player.use(sprite('run' + run))
-            // player.changeSprite('run' + run)
-        if(run<100){
-            run = run + 1
-        }
-        else {
-            run = 1
-        }
-    })
+    
 }
