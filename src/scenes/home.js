@@ -8,23 +8,28 @@ export default function Home() {
     ])
 
     const background = add([
-        sprite('bg0'),
+        // sprite('bg0'),
+        sprite('homebg'),
         pos(0,0),
         layer('bg'),
         scale(width() / 240, height() / 240),
     ])
 
-    var bg = 1
-    action(() => {
-        background.use(sprite('bg' + bg))
-        if(bg<107){
-            bg = bg + 1
-        }
-        else {
-            bg = 0
-        }
-    })
+    //Bg frame play
+    // var bg = 1
+    // action(() => {
+    //     background.use(sprite('bg' + bg))
+    //     if(bg<107){
+    //         bg = bg + 1
+    //     }
+    //     else {
+    //         bg = 0
+    //     }
+    // })
 
+    background.play('gg')
+
+    //Go to next scene on mouse click
     mouseClick(() => {
         go('game')
     })

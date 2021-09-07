@@ -2,7 +2,7 @@ let player;
 
 export default function PlayerActions() {
     player = add([
-        sprite('idle10'),
+        sprite('playeridle'),
         pos(30,0),
         body(), 
         area()
@@ -33,6 +33,7 @@ export default function PlayerActions() {
     var run = 2
     keyDown('right', () => {
         player.move(250, 0)
+        
         if(run%10 == 0)
             player.use(sprite('run' + run))
             // player.changeSprite('run' + run)
@@ -55,6 +56,24 @@ export default function PlayerActions() {
         }
         else {
             run = 1
+        }
+    })
+
+    var slide = 2
+    keyDown("shift", () => {
+        if (keyIsDown("right") || mouseIsDown()) {
+            player.move(500, 0)
+            if(slide%10 == 0)
+            player.use(sprite('slide' + slide))
+            // player.changeSprite('slide' + slide)
+            if(slide<100){
+                slide = slide + 1
+            }
+            else {
+                slide = 1
+            }
+        } else {
+            // TODO
         }
     })
 

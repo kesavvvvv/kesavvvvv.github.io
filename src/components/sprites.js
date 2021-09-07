@@ -1,4 +1,5 @@
 export default function SpritesInit() {
+
     //Setting root location to get sprite from github
     //loadRoot('https://raw.githubusercontent.com/kesavvvvv/kesavvvvv.github.io/master/assets/')
     loadRoot('assets/')
@@ -6,6 +7,27 @@ export default function SpritesInit() {
     //Load Sprites for base floor 
     loadSprite('grass', 'grass.png');
     loadSprite('dirt', 'dirt.png');
+
+    loadSprite('playeridle', 'models/player/idle/idlesheet.png', {
+        sliceX: 10, 
+        anims: {
+            idle: {
+                from: 0,
+                to: 9,
+            }
+        }
+    })
+
+    loadSprite('homebg', 'home1.png', {
+        sliceX: 30, 
+        anims: {
+            gg: {
+                from: 0,
+                to: 29,
+            }
+        }
+    })
+
 
     //Load Sprites for player running animation
     loadSprite('run10', 'models/player/run/run0.png')
@@ -55,10 +77,15 @@ export default function SpritesInit() {
     }
 
     var i=0
-    while(i<108) {
-        loadSprite('bg' + i, 'home/frame_' + padLeft(i, 3).toString() + '_delay-0.06s.png')
+    while(i<30) {
+        loadSprite('sun' + i, 'models/sun/50498c114151121.603b255757165-' + i + '.png')
         i += 1
     }
+
+
+
+    loadSprite('sky', 'sky.png')
+
 
     // loadSprite('mushroom', 'mushroom.png')
     // loadSprite('pipe-top-left', 'block.png')
