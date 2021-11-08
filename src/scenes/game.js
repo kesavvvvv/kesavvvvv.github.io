@@ -14,6 +14,8 @@ export default function Level() {
         scale(width() / 240, height() / 240),
     ])
 
+    
+
     //Initialize Map
     Map()
 
@@ -21,7 +23,7 @@ export default function Level() {
 
     player.play("idle")
 
-    Clouds()
+    Clouds(player)
 
     Sun(player)
 
@@ -55,6 +57,7 @@ export default function Level() {
     // addButton("start", vec2(100, 100), () => debug.log("oh hi"));
     // text1
 
+   
     //Press q to go back to home screen
     keyPress('q', () => {
         go("home")

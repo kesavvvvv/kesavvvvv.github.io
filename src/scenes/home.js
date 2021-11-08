@@ -2,7 +2,7 @@ export default function Home() {
     console.log("Home Page!")
     layers(['bg', 'obj', 'ui'], 'obj')
     add([
-        text("Hi! Welcome to my website.", 32), 
+        text("Hi! Welcome to my website.", 16), 
         origin('center'),
         pos(width()/2, height()/2)
     ])
@@ -28,6 +28,17 @@ export default function Home() {
     // })
 
     background.play('gg')
+
+    action(() => {
+    
+    
+        console.log(width(), height())
+        if(width() < height()) {
+            console.log(width(), height())
+            go("landscape")
+        }
+
+    })
 
     //Go to next scene on mouse click
     mouseClick(() => {

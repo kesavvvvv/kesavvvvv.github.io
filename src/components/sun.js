@@ -1,10 +1,9 @@
 export default function Sun(player) {
 
     var ySunPos = camPos().y - height()/2 + 40
-    console.log(player.pos.x -  width()/3)
     const sun = add([
         sprite('sun0'),
-        layer('ui'),
+        layer('bg'),
         
         pos(player.pos.x - width()/3, ySunPos)
     ])
@@ -22,5 +21,5 @@ export default function Sun(player) {
             i = 0
         }
     })
-    
+
 }

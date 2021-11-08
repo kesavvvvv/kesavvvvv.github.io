@@ -1,9 +1,9 @@
-export default function Clouds() {
+export default function Clouds(player) {
 
+    
     var max = 200
     var min = 75
     var cpos1 = Math.floor(Math.random() * (max - min) ) + min
-
     var cpos2 = Math.floor(Math.random() * (max - min) ) + min
     var cpos3 = Math.floor(Math.random() * (max - min) ) + min
     var cpos4 = Math.floor(Math.random() * (max - min) ) + min
@@ -12,38 +12,38 @@ export default function Clouds() {
     
     const cloud1 = add([
         sprite('cloud1'),
-        layer('ui'),
+        layer('bg'),
         pos(width() + 100, cpos1)
 
     ])
 
     const cloud2 = add([
         sprite('cloud2'),
-        layer('ui'),
-        pos(vec2( width() + 420, cpos2))
+        layer('bg'),
+        pos(vec2(width() + 420, cpos2))
     ])
 
     const cloud3 = add([
         sprite('cloud3'),
-        layer('ui'),
-        pos(vec2( width() + 960, cpos3))
+        layer('bg'),
+        pos(vec2(width() + 960, cpos3))
     ])
 
     const cloud4 = add([
         sprite('cloud4'),
-        layer('ui'),
-        pos(vec2( width() + 1620, cpos4))
+        layer('bg'),
+        pos(vec2(width() + 1620, cpos4))
     ])
 
     const cloud5 = add([
         sprite('cloud5'),
-        layer('ui'),
-        pos(vec2( width() + 2100 , cpos5))
+        layer('bg'),
+        pos(vec2(width() + 2100 , cpos5))
     ])
 
     // const cloud6 = add([
     //     sprite('cloud6'),
-    //     layer('ui'),
+    //     layer('bg'),
     //     pos(vec2( width() + 2360, cpos6))
     // ])
 

@@ -12,6 +12,7 @@ kaboom({
 import Home from './src/scenes/home.js'
 import SpritesInit from './src/components/sprites.js'
 import Game from './src/scenes/game.js'
+import Landscape from './src/scenes/landscape.js'
 
 //Initialize all Sprites
 SpritesInit()
@@ -22,5 +23,8 @@ scene('home', Home)
 //Game Page
 scene("game", Game)
 
+//Landscape
+scene("landscape", Landscape)
+
 //Start the website
-go('home');
+go("home")
