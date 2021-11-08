@@ -13,6 +13,7 @@ import Home from './src/scenes/home.js'
 import SpritesInit from './src/components/sprites.js'
 import Game from './src/scenes/game.js'
 import Landscape from './src/scenes/landscape.js'
+import Edu from './src/scenes/edu.js'
 
 //Initialize all Sprites
 SpritesInit()
@@ -22,6 +23,9 @@ scene('home', Home)
 
 //Game Page
 scene("game", Game)
+
+//Edu Page
+scene("edu", Edu)
 
 //Landscape
 scene("landscape", Landscape)

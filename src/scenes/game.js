@@ -21,7 +21,7 @@ export default function Level() {
 
     Player()
 
-    player.play("idle")
+    // player.play("idle")
 
     Clouds(player)
 
@@ -58,6 +58,18 @@ export default function Level() {
     // text1
 
    
+    // onKeyPress('s'), () => {
+        
+    //     onCollide('player', 'pipe', () => {
+    //         print("hello")
+    //        // go('home')
+    //     })
+
+    // }
+    
+
+    
+
     //Press q to go back to home screen
     keyPress('q', () => {
         go("home")

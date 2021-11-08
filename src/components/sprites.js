@@ -29,6 +29,7 @@ export default function SpritesInit() {
     })
 
 
+    loadSprite('pipe', 'models/pipe.png')
     //Load Sprites for player running animation
     loadSprite('run10', 'models/player/run/run0.png')
     loadSprite('run20', 'models/player/run/run1.png')

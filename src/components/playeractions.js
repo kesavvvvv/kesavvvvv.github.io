@@ -77,11 +77,26 @@ export default function PlayerActions() {
         }
     })
 
+    const pipe = add([
+        sprite('pipe'),
+        pos(500,500),
+        body(), 
+        area()
+    ])
     // camera position follow player
     player.action(() => {
         // console.log(camPos())
         camPos(player.pos);
+        if(player.pos.y > 1500) {
+            go('game')
+        }
+        if(pipe.isTouching(player)) {
+            keyPress('down', () => {
+                go('home')
+            })
+        }
     });
+    
 
     return player
 }
