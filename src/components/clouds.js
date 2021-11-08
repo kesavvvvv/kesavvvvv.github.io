@@ -16,7 +16,7 @@ export default function Clouds(player) {
         pos(width() + 100, cpos1)
 
     ])
-
+    
     const cloud2 = add([
         sprite('cloud2'),
         layer('bg'),
@@ -40,19 +40,11 @@ export default function Clouds(player) {
         layer('bg'),
         pos(vec2(width() + 2100 , cpos5))
     ])
-
-    // const cloud6 = add([
-    //     sprite('cloud6'),
-    //     layer('bg'),
-    //     pos(vec2( width() + 2360, cpos6))
-    // ])
-
     
     cloud1.action(() => {
 
         cloud1.moveTo(vec2(-width()/2 - 100 , cpos1), 100)
         if(cloud1.pos.x < -(width()/2) + camPos().x - 100) {
-            console.log("hi")
             cpos1 = Math.floor(Math.random() * (max - min) ) + min
             
             cloud1.moveTo(vec2(camPos().x + 30 + width()/2, cpos1))
@@ -64,7 +56,6 @@ export default function Clouds(player) {
         cloud2.moveTo(vec2(-(width()/2) - 100, cpos2), 100)
         if(cloud2.pos.x < -(width()/2) + camPos().x - 100) {
             cpos2 = Math.floor(Math.random() * (max - min) ) + min
-            console.log(width())
             cloud2.moveTo(vec2(camPos().x + 30 + width(), cpos2))
         }
             
@@ -97,14 +88,6 @@ export default function Clouds(player) {
        
     })
 
-    // cloud6.action(() => {
-    //     cloud6.moveTo(vec2(-(width()/2) + camPos().x - 100 - 30, cpos6), 1)
-    //     if(cloud6.pos.x == -(width()/2) + camPos().x - 100) {
-    //         cpos6 = Math.floor(Math.random() * (max - min) ) + min
-    //         cloud6.moveTo(vec2( width(), cpos6))
-    //     }
-        
-    // })
 
 
 }
