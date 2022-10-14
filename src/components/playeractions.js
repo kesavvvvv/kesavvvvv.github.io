@@ -8,6 +8,12 @@ export default function PlayerActions() {
         area()
     ])
 
+    
+    keyDown('up', () => {
+        player.jump()
+        
+    }) 
+
     // Mobile 
     // Swipe up on mobile for jump.
     var yClick = 0
@@ -30,10 +36,6 @@ export default function PlayerActions() {
         }
     })
 
-    keyDown('up', () => {
-        player.jump()
-        
-    }) 
 
     var run = 2
     keyDown('right', () => {
