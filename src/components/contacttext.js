@@ -1,7 +1,7 @@
 export default function EduText() {
 
     add([
-        text("Hi! Welcome to edu page", {size: 30}), 
+        text("Hi! contact to edu page", {size: 30}), 
         origin('left'),
         layer('ui'),
         pos(250)

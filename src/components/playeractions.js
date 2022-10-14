@@ -93,7 +93,21 @@ export default function PlayerActions() {
 
     const pipe2 = add([
         sprite('pipe'),
+        pos(2250,500),
+        body(), 
+        area()
+    ])
+
+    const pipe3 = add([
+        sprite('pipe'),
         pos(2500,500),
+        body(), 
+        area()
+    ])
+
+    const pipe4 = add([
+        sprite('pipe'),
+        pos(2750,500),
         body(), 
         area()
     ])
@@ -106,21 +120,29 @@ export default function PlayerActions() {
         }
         if(pipe1.isTouching(player)) {
             keyPress('down', () => {
-                go('edu')
+                go('about')
             })
-        }
-    });
-    player.action(() => {
-        // console.log(camPos())
-        camPos(player.pos);
-        if(player.pos.y > 1500) {
-            go('game')
         }
         if(pipe2.isTouching(player)) {
             keyPress('down', () => {
-                window.open("http://www.google.com");
+                go('projects')
             })
         }
+        if(pipe3.isTouching(player)) {
+            keyPress('down', () => {
+                go('skills')
+            })
+        }
+        if(pipe4.isTouching(player)) {
+            keyPress('down', () => {
+                go('contact')
+            })
+        }
+        // if(pipe2.isTouching(player)) {
+        //     keyPress('down', () => {
+        //         window.open("http://www.google.com");
+        //     })
+        // }
     });
     
 
