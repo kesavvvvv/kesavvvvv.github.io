@@ -84,9 +84,16 @@ export default function PlayerActions() {
         }
     })
 
-    const pipe = add([
+    const pipe1 = add([
         sprite('pipe'),
-        pos(500,500),
+        pos(2000,500),
+        body(), 
+        area()
+    ])
+
+    const pipe2 = add([
+        sprite('pipe'),
+        pos(2500,500),
         body(), 
         area()
     ])
