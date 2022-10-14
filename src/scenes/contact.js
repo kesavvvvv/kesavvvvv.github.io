@@ -1,6 +1,6 @@
 import Clouds from '../components/clouds.js'
 import Map from '../components/map.js'
-import Player, {player} from '../components/playeractions.js'
+import ContactPlayer, {player} from '../components/contactplayeractions.js'
 import Sun from '../components/sun.js'
 import EduText from '../components/contacttext.js'
 
@@ -19,7 +19,7 @@ export default function Contact() {
     //Initialize Map
     Map()
 
-    Player()
+    ContactPlayer()
 
     // player.play("idle")
 
