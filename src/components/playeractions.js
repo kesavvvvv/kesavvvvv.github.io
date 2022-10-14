@@ -92,7 +92,7 @@ export default function PlayerActions() {
         }
         if(pipe.isTouching(player)) {
             keyPress('down', () => {
-                window.location.replace("http://www.google.com");
+                window.open("http://www.google.com");
             })
         }
     });
