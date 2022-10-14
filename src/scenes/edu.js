@@ -27,7 +27,7 @@ export default function Edu() {
 
     Sun(player)
 
-    Text()
+    EduText()
 
     // const bg1 = add([
     //     pos(vec2(100, 100)),
