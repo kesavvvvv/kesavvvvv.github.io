@@ -150,65 +150,65 @@ export default function PlayerActions() {
             keyPress('down', () => {
                 window.open("https://github.com/kesavvvvv/Pac-Man")
             })
-            yClick = 0
-            yRelease = 0
-            mouseClick(() => {  
-                yClick = mousePos().y
-                mouseRelease(() => {
-                    yRelease = mousePos().y
-                    if(yRelease > yClick + 350) {
-                        window.open("https://github.com/kesavvvvv/Pac-Man")
-                    }
-                })
-            })
+            // yClick = 0
+            // yRelease = 0
+            // mouseClick(() => {  
+            //     yClick = mousePos().y
+            //     mouseRelease(() => {
+            //         yRelease = mousePos().y
+            //         if(yRelease > yClick + 350) {
+            //             window.open("https://github.com/kesavvvvv/Pac-Man")
+            //         }
+            //     })
+            // })
         }
         if(pipe5.isTouching(player)) {
             keyPress('down', () => {
                 window.open("https://github.com/kesavvvvv/Movies")
             })
-            yClick = 0
-            yRelease = 0
-            mouseClick(() => {  
-                yClick = mousePos().y
-                mouseRelease(() => {
-                    yRelease = mousePos().y
-                    if(yRelease > yClick + 350) {
-                        window.open("https://github.com/kesavvvvv/Movies")
-                    }
-                })
-            })
+            // yClick = 0
+            // yRelease = 0
+            // mouseClick(() => {  
+            //     yClick = mousePos().y
+            //     mouseRelease(() => {
+            //         yRelease = mousePos().y
+            //         if(yRelease > yClick + 350) {
+            //             window.open("https://github.com/kesavvvvv/Movies")
+            //         }
+            //     })
+            // })
         }
         if(pipe6.isTouching(player)) {
             keyPress('down', () => {
                 window.open("https://github.com/kesavvvvv/Chatting-Android")
             })
-            yClick = 0
-            yRelease = 0
-            mouseClick(() => {  
-                yClick = mousePos().y
-                mouseRelease(() => {
-                    yRelease = mousePos().y
-                    if(yRelease > yClick + 350) {
-                        window.open("https://github.com/kesavvvvv/Chatting-Android")
-                    }
-                })
-            })
+            // yClick = 0
+            // yRelease = 0
+            // mouseClick(() => {  
+            //     yClick = mousePos().y
+            //     mouseRelease(() => {
+            //         yRelease = mousePos().y
+            //         if(yRelease > yClick + 350) {
+            //             window.open("https://github.com/kesavvvvv/Chatting-Android")
+            //         }
+            //     })
+            // })
         }
         if(pipe7.isTouching(player)) {
             keyPress('down', () => {
                 window.open("https://github.com/kesavvvvv/kesavvvvv.github.io")
             })
-            yClick = 0
-            yRelease = 0
-            mouseClick(() => {  
-                yClick = mousePos().y
-                mouseRelease(() => {
-                    yRelease = mousePos().y
-                    if(yRelease > yClick + 350) {
-                        window.open("https://github.com/kesavvvvv/kesavvvvv.github.io")
-                    }
-                })
-            })
+            // yClick = 0
+            // yRelease = 0
+            // mouseClick(() => {  
+            //     yClick = mousePos().y
+            //     mouseRelease(() => {
+            //         yRelease = mousePos().y
+            //         if(yRelease > yClick + 350) {
+            //             window.open("https://github.com/kesavvvvv/kesavvvvv.github.io")
+            //         }
+            //     })
+            // })
         }
         if(pipe1.isTouching(player)) {
             keyPress('down', () => {
