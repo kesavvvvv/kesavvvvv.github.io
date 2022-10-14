@@ -99,6 +99,7 @@ export default function PlayerActions() {
         }
         if(pipe.isTouching(player)) {
             keyPress('down', () => {
+                go('edu')
                 window.open("http://www.google.com");
             })
         }
