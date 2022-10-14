@@ -13,7 +13,11 @@ import Home from './src/scenes/home.js'
 import SpritesInit from './src/components/sprites.js'
 import Game from './src/scenes/game.js'
 import Landscape from './src/scenes/landscape.js'
-import Edu from './src/scenes/edu.js'
+import About from './src/scenes/about.js'
+import Projects from './src/scenes/projects.js'
+import Contact from './src/scenes/contact.js'
+import Skills from './src/scenes/skills.js'
+
 
 //Initialize all Sprites
 SpritesInit()
@@ -25,7 +29,13 @@ scene('home', Home)
 scene("game", Game)
 
 //Edu Page
-scene("edu", Edu)
+scene("about", About)
+
+scene("contact", Contact)
+
+scene("skills", Skills)
+
+scene("projects", Projects)
 
 //Landscape
 scene("landscape", Landscape)
