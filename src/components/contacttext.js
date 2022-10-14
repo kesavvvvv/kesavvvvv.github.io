@@ -13,4 +13,36 @@ export default function EduText() {
         // pos(1300, 250)
         pos(300)
     ])
+
+    add([
+        text("About", {size: 30}), 
+        origin('left'),
+        layer('ui'),
+        // pos(2500, 250)
+        pos(2000, 350)
+    ])
+
+    add([
+        text("Projects", {size: 30}), 
+        origin('left'),
+        layer('ui'),
+        // pos(2500, 250)
+        pos(2200, 350)
+    ])
+
+    add([
+        text("Skills", {size: 30}), 
+        origin('left'),
+        layer('ui'),
+        // pos(2500, 250)
+        pos(2500, 350)
+    ])
+
+    add([
+        text("Contact", {size: 30}), 
+        origin('left'),
+        layer('ui'),
+        // pos(2500, 250)
+        pos(2750, 350)
+    ])
 }

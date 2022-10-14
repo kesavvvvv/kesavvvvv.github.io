@@ -29,16 +29,16 @@ export default function Home() {
 
     background.play('gg')
 
-    action(() => {
+    // action(() => {
     
     
-        console.log(width(), height())
-        if(width() < height()) {
-            console.log(width(), height())
-            go("landscape")
-        }
+    //     console.log(width(), height())
+    //     if(width() < height()) {
+    //         console.log(width(), height())
+    //         go("landscape")
+    //     }
 
-    })
+    // })
 
     //Go to next scene on mouse click
     mouseClick(() => {
