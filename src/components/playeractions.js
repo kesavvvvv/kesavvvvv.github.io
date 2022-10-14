@@ -30,6 +30,11 @@ export default function PlayerActions() {
         }
     })
 
+    keyDown('right', () => {
+        player.jump()
+        
+    }) 
+
     var run = 2
     keyDown('right', () => {
         player.move(250, 0)
