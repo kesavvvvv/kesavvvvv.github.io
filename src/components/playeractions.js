@@ -30,7 +30,7 @@ export default function PlayerActions() {
         }
     })
 
-    keyDown('right', () => {
+    keyDown('up', () => {
         player.jump()
         
     }) 
