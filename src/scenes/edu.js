@@ -2,7 +2,7 @@ import Clouds from '../components/clouds.js'
 import Map from '../components/map.js'
 import Player, {player} from '../components/playeractions.js'
 import Sun from '../components/sun.js'
-import Text from '../components/text.js'
+import EduText from '../components/edutext.js'
 
 export default function Edu() {
     layers(['bg', 'obj', 'ui'], 'obj')
