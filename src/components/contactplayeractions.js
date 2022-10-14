@@ -91,7 +91,7 @@ export default function PlayerActions() {
         area()
     ])
 
-    const pipe0 = add([
+    const pipe5 = add([
         sprite('pipe'),
         pos(750,500),
         body(), 
@@ -148,7 +148,7 @@ export default function PlayerActions() {
                 })
             })
         }
-        if(pipe0.isTouching(player)) {
+        if(pipe5.isTouching(player)) {
             keyPress('down', () => {
                 window.open("https://www.linkedin.com/in/kesavvvvv")
             })
