@@ -36,7 +36,7 @@ export default function EduText() {
         origin('left'),
         layer('ui'),
         // pos(2500, 250)
-        pos(2200, 350)
+        pos(2222, 350)
     ])
 
     add([

@@ -21,7 +21,7 @@ export default function Text() {
         // pos(2500, 250)
         pos(350)
     ])
-    
+
     add([
         text("About", {size: 30}), 
         origin('left'),
@@ -35,7 +35,7 @@ export default function Text() {
         origin('left'),
         layer('ui'),
         // pos(2500, 250)
-        pos(2200, 350)
+        pos(2222, 350)
     ])
 
     add([

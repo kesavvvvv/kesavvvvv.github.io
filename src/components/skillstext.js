@@ -1,13 +1,13 @@
 export default function EduText() {
 
     add([
-        text("Hi! Skills to edu page", {size: 30}), 
+        text("Languages: Java, Python, C, C++, JavaScript, C#", {size: 30}), 
         origin('left'),
         layer('ui'),
         pos(250)
     ])
     add([
-        text("I am currently doing my Master of Science in Computer Science at UCSC.", {size: 30}), 
+        text("Frameworks: Spring, Hibernate, Maven, JUnit, Node.js, React Native, Angular, Pytorch, Keras, Robot Operating System, Ansys HFSS, Electromagnetic CAD", {size: 30}), 
         origin('left'),
         layer('ui'),
         // pos(1300, 250)
@@ -15,7 +15,7 @@ export default function EduText() {
     ])
 
     add([
-        text("Feel free to look around the different areas...", {size: 30}), 
+        text("Developer Tools: Git, Docker, AWS, Elastic Search, Android Studio, Unity, MongoDB, SQL", {size: 30}), 
         origin('left'),
         layer('ui'),
         // pos(2500, 250)
@@ -35,7 +35,7 @@ export default function EduText() {
         origin('left'),
         layer('ui'),
         // pos(2500, 250)
-        pos(2200, 350)
+        pos(2222, 350)
     ])
 
     add([
