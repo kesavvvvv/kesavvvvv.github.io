@@ -7,7 +7,7 @@ export default function Text() {
         pos(250)
     ])
     add([
-        text("Use the right and up arrow keys to move around using the keyboard.", {size: 30}), 
+        text("Use the right and up arrow keys to move around using the keyboard. Press down arrow key to enter the pipe.", {size: 30}), 
         origin('left'),
         layer('ui'),
         // pos(1300, 250)
@@ -21,7 +21,7 @@ export default function Text() {
         // pos(2500, 250)
         pos(350)
     ])
-    
+
     add([
         text("About", {size: 30}), 
         origin('left'),

@@ -122,20 +122,64 @@ export default function PlayerActions() {
             keyPress('down', () => {
                 go('about')
             })
+            yClick = 0
+            yRelease = 0
+            mouseClick(() => {  
+                yClick = mousePos().y
+                mouseRelease(() => {
+                    yRelease = mousePos().y
+                    if(yRelease > yClick + 350) {
+                        go('about')
+                    }
+                })
+            })
         }
         if(pipe2.isTouching(player)) {
             keyPress('down', () => {
                 go('projects')
+            })
+            yClick = 0
+            yRelease = 0
+            mouseClick(() => {  
+                yClick = mousePos().y
+                mouseRelease(() => {
+                    yRelease = mousePos().y
+                    if(yRelease > yClick + 350) {
+                        go('projects')
+                    }
+                })
             })
         }
         if(pipe3.isTouching(player)) {
             keyPress('down', () => {
                 go('skills')
             })
+            yClick = 0
+            yRelease = 0
+            mouseClick(() => {  
+                yClick = mousePos().y
+                mouseRelease(() => {
+                    yRelease = mousePos().y
+                    if(yRelease > yClick + 350) {
+                        go('skills')
+                    }
+                })
+            })
         }
         if(pipe4.isTouching(player)) {
             keyPress('down', () => {
                 go('contact')
+            })
+            yClick = 0
+            yRelease = 0
+            mouseClick(() => {  
+                yClick = mousePos().y
+                mouseRelease(() => {
+                    yRelease = mousePos().y
+                    if(yRelease > yClick + 350) {
+                        go('contact')
+                    }
+                })
             })
         }
         // if(pipe2.isTouching(player)) {
