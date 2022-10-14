@@ -37,14 +37,6 @@ export default function EduText() {
         // pos(1300, 250)
         pos(1000, 350)
     ])
-    
-    add([
-        text("Feel free to look around the different areas...", {size: 30}), 
-        origin('left'),
-        layer('ui'),
-        // pos(2500, 250)
-        pos(350)
-    ])
 
     add([
         text("About", {size: 30}), 
