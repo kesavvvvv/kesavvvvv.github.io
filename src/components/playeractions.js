@@ -104,9 +104,20 @@ export default function PlayerActions() {
         if(player.pos.y > 1500) {
             go('game')
         }
-        if(pipe.isTouching(player)) {
+        if(pipe1.isTouching(player)) {
             keyPress('down', () => {
                 go('edu')
+            })
+        }
+    });
+    player.action(() => {
+        // console.log(camPos())
+        camPos(player.pos);
+        if(player.pos.y > 1500) {
+            go('game')
+        }
+        if(pipe2.isTouching(player)) {
+            keyPress('down', () => {
                 window.open("http://www.google.com");
             })
         }
