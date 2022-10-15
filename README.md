@@ -1,1 +1,1 @@
-Credits to [kaboom.js](https://www.kaboomjs.com)
+Credits to [kaboom.js](https://kaboomjs.com)
