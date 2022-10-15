@@ -146,74 +146,82 @@ export default function PlayerActions() {
         if(player.pos.y > 1500) {
             go('game')
         }
-        if(pipe.isTouching(player)) {
-            keyPress('down', () => {
+        keyPress('down', () => {
+            if(pipe.isTouching(player)) {
                 window.open("https://github.com/kesavvvvv/Pac-Man",'_blank')
-                go('projects')
-            })
-            // yClick = 0
-            // yRelease = 0
-            // mouseClick(() => {  
-            //     yClick = mousePos().y
-            //     mouseRelease(() => {
-            //         yRelease = mousePos().y
-            //         if(yRelease > yClick + 350) {
-            //             window.open("https://github.com/kesavvvvv/Pac-Man")
-            //         }
-            //     })
-            // })
-        }
-        if(pipe5.isTouching(player)) {
-            keyPress('down', () => {
+            }
+            if(pipe5.isTouching(player)) {
                 window.open("https://github.com/kesavvvvv/Movies",'_blank')
-                go('projects')
-            })
-            // yClick = 0
-            // yRelease = 0
-            // mouseClick(() => {  
-            //     yClick = mousePos().y
-            //     mouseRelease(() => {
-            //         yRelease = mousePos().y
-            //         if(yRelease > yClick + 350) {
-            //             window.open("https://github.com/kesavvvvv/Movies")
-            //         }
-            //     })
-            // })
-        }
-        if(pipe6.isTouching(player)) {
-            keyPress('down', () => {
-                window.open("https://github.com/kesavvvvv/Chatting-Android",'_blank')
-                go('projects')
-            })
-            // yClick = 0
-            // yRelease = 0
-            // mouseClick(() => {  
-            //     yClick = mousePos().y
-            //     mouseRelease(() => {
-            //         yRelease = mousePos().y
-            //         if(yRelease > yClick + 350) {
-            //             window.open("https://github.com/kesavvvvv/Chatting-Android")
-            //         }
-            //     })
-            // })
-        }
-        if(pipe7.isTouching(player)) {
-            keyPress('down', () => {
-                window.open("https://github.com/kesavvvvv/kesavvvvv.github.io",'_blank')
-                go('projects')
-            })
-            // yClick = 0
-            // yRelease = 0
-            // mouseClick(() => {  
-            //     yClick = mousePos().y
-            //     mouseRelease(() => {
-            //         yRelease = mousePos().y
-            //         if(yRelease > yClick + 350) {
-            //             window.open("https://github.com/kesavvvvv/kesavvvvv.github.io")
-            //         }
-            //     })
-            // })
-        }
+            }
+        })
+        // if(pipe.isTouching(player)) {
+        //     keyPress('down', () => {
+        //         window.open("https://github.com/kesavvvvv/Pac-Man",'_blank')
+        //         go('projects')
+        //     })
+        //     // yClick = 0
+        //     // yRelease = 0
+        //     // mouseClick(() => {  
+        //     //     yClick = mousePos().y
+        //     //     mouseRelease(() => {
+        //     //         yRelease = mousePos().y
+        //     //         if(yRelease > yClick + 350) {
+        //     //             window.open("https://github.com/kesavvvvv/Pac-Man")
+        //     //         }
+        //     //     })
+        //     // })
+        // }
+        // if(pipe5.isTouching(player)) {
+        //     keyPress('down', () => {
+        //         window.open("https://github.com/kesavvvvv/Movies",'_blank')
+        //         go('projects')
+        //     })
+        //     // yClick = 0
+        //     // yRelease = 0
+        //     // mouseClick(() => {  
+        //     //     yClick = mousePos().y
+        //     //     mouseRelease(() => {
+        //     //         yRelease = mousePos().y
+        //     //         if(yRelease > yClick + 350) {
+        //     //             window.open("https://github.com/kesavvvvv/Movies")
+        //     //         }
+        //     //     })
+        //     // })
+        // }
+        // if(pipe6.isTouching(player)) {
+        //     keyPress('down', () => {
+        //         window.open("https://github.com/kesavvvvv/Chatting-Android",'_blank')
+        //         go('projects')
+        //     })
+        //     // yClick = 0
+        //     // yRelease = 0
+        //     // mouseClick(() => {  
+        //     //     yClick = mousePos().y
+        //     //     mouseRelease(() => {
+        //     //         yRelease = mousePos().y
+        //     //         if(yRelease > yClick + 350) {
+        //     //             window.open("https://github.com/kesavvvvv/Chatting-Android")
+        //     //         }
+        //     //     })
+        //     // })
+        // }
+        // if(pipe7.isTouching(player)) {
+        //     keyPress('down', () => {
+        //         window.open("https://github.com/kesavvvvv/kesavvvvv.github.io",'_blank')
+        //         go('projects')
+        //     })
+        //     // yClick = 0
+        //     // yRelease = 0
+        //     // mouseClick(() => {  
+        //     //     yClick = mousePos().y
+        //     //     mouseRelease(() => {
+        //     //         yRelease = mousePos().y
+        //     //         if(yRelease > yClick + 350) {
+        //     //             window.open("https://github.com/kesavvvvv/kesavvvvv.github.io")
+        //     //         }
+        //     //     })
+        //     // })
+        // }
         if(pipe1.isTouching(player)) {
             keyPress('down', () => {
                 go('about')
