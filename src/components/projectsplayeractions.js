@@ -153,7 +153,65 @@ export default function PlayerActions() {
             if(pipe5.isTouching(player)) {
                 window.open("https://github.com/kesavvvvv/Movies",'_blank')
             }
+            if(pipe6.isTouching(player)) {
+                window.open("https://github.com/kesavvvvv/Chatting-Android",'_blank')
+            }
+            if(pipe7.isTouching(player)) {
+                window.open("https://github.com/kesavvvvv/kesavvvvv.github.io",'_blank')
+            }
+            if(pipe1.isTouching(player)) {
+                go('about')
+            }
+            if(pipe2.isTouching(player)) {
+                go('projects')
+            }
+            if(pipe3.isTouching(player)) {
+                go('skills')
+            }
+            if(pipe4.isTouching(player)) {
+                go('contact')
+            }
+            
         })
+
+        yClick = 0
+        yRelease = 0
+        mouseClick(() => {  
+            yClick = mousePos().y
+            mouseRelease(() => {
+                yRelease = mousePos().y
+                if(yRelease > yClick + 350) {
+                    if(pipe.isTouching(player)) {
+                        window.open("https://github.com/kesavvvvv/Pac-Man",'_blank')
+                    }
+                    if(pipe5.isTouching(player)) {
+                        window.open("https://github.com/kesavvvvv/Movies",'_blank')
+                    }
+                    if(pipe6.isTouching(player)) {
+                        window.open("https://github.com/kesavvvvv/Chatting-Android",'_blank')
+                    }
+                    if(pipe7.isTouching(player)) {
+                        window.open("https://github.com/kesavvvvv/kesavvvvv.github.io",'_blank')
+                    }
+                    if(pipe1.isTouching(player)) {
+                        go('about')
+                    }
+                    if(pipe2.isTouching(player)) {
+                        go('projects')
+                    }
+                    if(pipe3.isTouching(player)) {
+                        go('skills')
+                    }
+                    if(pipe4.isTouching(player)) {
+                        go('contact')
+                    }
+                }
+            })
+        })
+
+
+        //I'm so dumb sometimes gonna keep this here for the future fuck this shit. 
+
         // if(pipe.isTouching(player)) {
         //     keyPress('down', () => {
         //         window.open("https://github.com/kesavvvvv/Pac-Man",'_blank')
@@ -222,70 +280,70 @@ export default function PlayerActions() {
         //     //     })
         //     // })
         // }
-        if(pipe1.isTouching(player)) {
-            keyPress('down', () => {
-                go('about')
-            })
-            yClick = 0
-            yRelease = 0
-            mouseClick(() => {  
-                yClick = mousePos().y
-                mouseRelease(() => {
-                    yRelease = mousePos().y
-                    if(yRelease > yClick + 350) {
-                        go('about')
-                    }
-                })
-            })
-        }
-        if(pipe2.isTouching(player)) {
-            keyPress('down', () => {
-                go('projects')
-            })
-            yClick = 0
-            yRelease = 0
-            mouseClick(() => {  
-                yClick = mousePos().y
-                mouseRelease(() => {
-                    yRelease = mousePos().y
-                    if(yRelease > yClick + 350) {
-                        go('projects')
-                    }
-                })
-            })
-        }
-        if(pipe3.isTouching(player)) {
-            keyPress('down', () => {
-                go('skills')
-            })
-            yClick = 0
-            yRelease = 0
-            mouseClick(() => {  
-                yClick = mousePos().y
-                mouseRelease(() => {
-                    yRelease = mousePos().y
-                    if(yRelease > yClick + 350) {
-                        go('skills')
-                    }
-                })
-            })
-        }
-        if(pipe4.isTouching(player)) {
-            keyPress('down', () => {
-                go('contact')
-            })
-            yClick = 0
-            yRelease = 0
-            mouseClick(() => {  
-                yClick = mousePos().y
-                mouseRelease(() => {
-                    yRelease = mousePos().y
-                    if(yRelease > yClick + 350) {
-                        go('contact')
-                    }
-                })
-            })
-        }
+        // if(pipe1.isTouching(player)) {
+        //     keyPress('down', () => {
+        //         go('about')
+        //     })
+        //     yClick = 0
+        //     yRelease = 0
+        //     mouseClick(() => {  
+        //         yClick = mousePos().y
+        //         mouseRelease(() => {
+        //             yRelease = mousePos().y
+        //             if(yRelease > yClick + 350) {
+        //                 go('about')
+        //             }
+        //         })
+        //     })
+        // }
+        // if(pipe2.isTouching(player)) {
+        //     keyPress('down', () => {
+        //         go('projects')
+        //     })
+        //     yClick = 0
+        //     yRelease = 0
+        //     mouseClick(() => {  
+        //         yClick = mousePos().y
+        //         mouseRelease(() => {
+        //             yRelease = mousePos().y
+        //             if(yRelease > yClick + 350) {
+        //                 go('projects')
+        //             }
+        //         })
+        //     })
+        // }
+        // if(pipe3.isTouching(player)) {
+        //     keyPress('down', () => {
+        //         go('skills')
+        //     })
+        //     yClick = 0
+        //     yRelease = 0
+        //     mouseClick(() => {  
+        //         yClick = mousePos().y
+        //         mouseRelease(() => {
+        //             yRelease = mousePos().y
+        //             if(yRelease > yClick + 350) {
+        //                 go('skills')
+        //             }
+        //         })
+        //     })
+        // }
+        // if(pipe4.isTouching(player)) {
+        //     keyPress('down', () => {
+        //         go('contact')
+        //     })
+        //     yClick = 0
+        //     yRelease = 0
+        //     mouseClick(() => {  
+        //         yClick = mousePos().y
+        //         mouseRelease(() => {
+        //             yRelease = mousePos().y
+        //             if(yRelease > yClick + 350) {
+        //                 go('contact')
+        //             }
+        //         })
+        //     })
+        // }
         // if(pipe2.isTouching(player)) {
         //     keyPress('down', () => {
         //         window.open("http://www.google.com");
