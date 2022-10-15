@@ -148,7 +148,7 @@ export default function PlayerActions() {
         }
         if(pipe.isTouching(player)) {
             keyPress('down', () => {
-                window.open("https://github.com/kesavvvvv/Pac-Man")
+                window.open("https://github.com/kesavvvvv/Pac-Man",'_blank')
             })
             // yClick = 0
             // yRelease = 0
@@ -164,7 +164,7 @@ export default function PlayerActions() {
         }
         if(pipe5.isTouching(player)) {
             keyPress('down', () => {
-                window.open("https://github.com/kesavvvvv/Movies")
+                window.open("https://github.com/kesavvvvv/Movies",'_blank')
             })
             // yClick = 0
             // yRelease = 0
@@ -180,7 +180,7 @@ export default function PlayerActions() {
         }
         if(pipe6.isTouching(player)) {
             keyPress('down', () => {
-                window.open("https://github.com/kesavvvvv/Chatting-Android")
+                window.open("https://github.com/kesavvvvv/Chatting-Android",'_blank')
             })
             // yClick = 0
             // yRelease = 0
@@ -196,7 +196,7 @@ export default function PlayerActions() {
         }
         if(pipe7.isTouching(player)) {
             keyPress('down', () => {
-                window.open("https://github.com/kesavvvvv/kesavvvvv.github.io")
+                window.open("https://github.com/kesavvvvv/kesavvvvv.github.io",'_blank')
             })
             // yClick = 0
             // yRelease = 0
