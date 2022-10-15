@@ -135,6 +135,7 @@ export default function PlayerActions() {
         if(pipe.isTouching(player)) {
             keyPress('down', () => {
                 window.open("http://github.com/kesavvvvv")
+                go('contact')
             })
             yClick = 0
             yRelease = 0
@@ -144,6 +145,7 @@ export default function PlayerActions() {
                     yRelease = mousePos().y
                     if(yRelease > yClick + 350) {
                         window.open("http://github.com/kesavvvvv")
+                        go('contact')
                     }
                 })
             })
@@ -151,6 +153,7 @@ export default function PlayerActions() {
         if(pipe5.isTouching(player)) {
             keyPress('down', () => {
                 window.open("https://www.linkedin.com/in/kesavvvvv")
+                go('contact')
             })
             yClick = 0
             yRelease = 0
@@ -160,6 +163,7 @@ export default function PlayerActions() {
                     yRelease = mousePos().y
                     if(yRelease > yClick + 350) {
                         window.open("https://www.linkedin.com/in/kesavvvvv")
+                        go('contact')
                     }
                 })
             })

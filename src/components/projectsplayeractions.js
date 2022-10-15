@@ -149,6 +149,7 @@ export default function PlayerActions() {
         if(pipe.isTouching(player)) {
             keyPress('down', () => {
                 window.open("https://github.com/kesavvvvv/Pac-Man",'_blank')
+                go('projects')
             })
             // yClick = 0
             // yRelease = 0
@@ -165,6 +166,7 @@ export default function PlayerActions() {
         if(pipe5.isTouching(player)) {
             keyPress('down', () => {
                 window.open("https://github.com/kesavvvvv/Movies",'_blank')
+                go('projects')
             })
             // yClick = 0
             // yRelease = 0
@@ -181,6 +183,7 @@ export default function PlayerActions() {
         if(pipe6.isTouching(player)) {
             keyPress('down', () => {
                 window.open("https://github.com/kesavvvvv/Chatting-Android",'_blank')
+                go('projects')
             })
             // yClick = 0
             // yRelease = 0
@@ -197,6 +200,7 @@ export default function PlayerActions() {
         if(pipe7.isTouching(player)) {
             keyPress('down', () => {
                 window.open("https://github.com/kesavvvvv/kesavvvvv.github.io",'_blank')
+                go('projects')
             })
             // yClick = 0
             // yRelease = 0
