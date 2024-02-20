@@ -30,7 +30,7 @@ export default function PlayerActions() {
 
     mouseClick(() => { 
         // console.log(mousePos())
-        if(mousePos().x>70 && mousePos().x<130 && mousePos().y>85 && mousePos().y<115) {
+        if(mousePos().y<115) {
             console.log(player.pos)
             player.jump()
         }
