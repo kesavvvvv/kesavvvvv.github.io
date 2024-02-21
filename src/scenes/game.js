@@ -1,6 +1,6 @@
 import Clouds from '../components/clouds.js'
 import Map from '../components/map.js'
-import Player, {player} from '../components/playeractions.js'
+import Player, {player, pipe1} from '../components/playeractions.js'
 import Sun from '../components/sun.js'
 import Text from '../components/text.js'
 
