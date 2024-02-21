@@ -147,9 +147,9 @@ export default function PlayerActions() {
 
             console.log(yLoc)
             console.log(xLoc)
-        }
+        })
             
-
+        
         // yClick = 0
         // yRelease = 0
         // mouseClick(() => {  
