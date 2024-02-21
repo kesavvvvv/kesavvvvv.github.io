@@ -118,8 +118,9 @@ export default function PlayerActions() {
     ])
     // camera position follow player
 
-    var xLoc = 0
-    var yLoc = 0
+    
+    var yClick_1 = 0
+    var yRelease_1 = 0
     
     player.action(() => {
         // console.log(camPos())
@@ -145,55 +146,31 @@ export default function PlayerActions() {
             
         })
 
-        mouseClick(() => {
-            yLoc = mousePos().y
-            xLoc = mousePos().x
-
-            console.log("xLocation")
-            console.log(yLoc)
-            console.log("yLocation")
-            console.log(xLoc)
-
-            if(xLoc > 30 && yLoc > 850 && xLoc < 173 && yLoc < 900) {
-                if(pipe1.isTouching(player)) {
-                    go('about')
-                }
-                if(pipe2.isTouching(player)) {
-                    go('projects')
-                }
-                if(pipe3.isTouching(player)) {
-                    go('skills')
-                }
-                if(pipe4.isTouching(player)) {
-                    go('contact')
-                }
-            }
-        })
+        
             
         
-        // yClick = 0
-        // yRelease = 0
-        // mouseClick(() => {  
-        //     yClick = mousePos().y
-        //     mouseRelease(() => {
-        //         yRelease = mousePos().y
-        //         if(yRelease > yClick + 350) {
+        
+        mouseClick(() => {  
+            yClick_1 = mousePos().y
+            mouseRelease(() => {
+                yRelease_1 = mousePos().y
+                if(yRelease_1 > yClick_1 + 350) {
                     
-        //             if(pipe1.isTouching(player)) {
-        //                 go('about')
-        //             }
-        //             if(pipe2.isTouching(player)) {
-        //                 go('projects')
-        //             }
-        //             if(pipe3.isTouching(player)) {
-        //                 go('skills')
-        //             }
-        //             if(pipe4.isTouching(player)) {
-        //                 go('contact')
-        //             }
-        //         }
-        //     })
-        // })
+                    if(pipe1.isTouching(player)) {
+                        go('about')
+                    }
+                    if(pipe2.isTouching(player)) {
+                        go('projects')
+                    }
+                    if(pipe3.isTouching(player)) {
+                        go('skills')
+                    }
+                    if(pipe4.isTouching(player)) {
+                        go('contact')
+                    }
+                }
+            })
+        })
 
 
         // if(pipe1.isTouching(player)) {
