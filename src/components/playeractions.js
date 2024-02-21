@@ -154,7 +154,7 @@ export default function PlayerActions() {
             console.log("yLocation")
             console.log(xLoc)
 
-            if(xLoc > 30 && yLoc > 750 && xLoc < 173 && yLoc < 800) {
+            if(xLoc > 30 && yLoc > 850 && xLoc < 173 && yLoc < 900) {
                 if(pipe1.isTouching(player)) {
                     go('about')
                 }
