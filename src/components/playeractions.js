@@ -121,6 +121,8 @@ export default function PlayerActions() {
     
     var yClick_1 = 0
     var yRelease_1 = 0
+
+    
     
     player.action(() => {
         // console.log(camPos())
@@ -147,29 +149,24 @@ export default function PlayerActions() {
         })
 
         
-            
+            // if(pipe1.pos.x) {
+            //     go('about')
+            // }
+            // if(pipe2.isTouching(player)) {
+            //     go('projects')
+            // }
+            // if(pipe3.isTouching(player)) {
+            //     go('skills')
+            // }
+            // if(pipe4.isTouching(player)) {
+            //     go('contact')
+            // }
+
+        console.log(pipe1.pos.x)
+        console.log(pipe1.pos.y)
         
         
-        mouseClick(() => {  
-            yClick_1 = mousePos().y
-            mouseRelease(() => {
-                yRelease_1 = mousePos().y
-                if(yRelease_1 > yClick_1 + 350) {
-                    
-                    if(pipe1.isTouching(player)) {
-                        go('about')
-                    }
-                    if(pipe2.isTouching(player)) {
-                        go('projects')
-                    }
-                    if(pipe3.isTouching(player)) {
-                        go('skills')
-                    }
-                    if(pipe4.isTouching(player)) {
-                        go('contact')
-                    }
-                }
-            })
+        
         })
 
 
