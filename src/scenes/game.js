@@ -82,21 +82,6 @@ export default function Level() {
                 console.log("inside jump")
                 player.jump()
             }
-            if(yRelease > yClick + 350) {
-                
-                if(pipe1.isTouching(player)) {
-                    go('about')
-                }
-                if(pipe2.isTouching(player)) {
-                    go('projects')
-                }
-                if(pipe3.isTouching(player)) {
-                    go('skills')
-                }
-                if(pipe4.isTouching(player)) {
-                    go('contact')
-                }
-            }
         })
     })
 
