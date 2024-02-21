@@ -145,7 +145,9 @@ export default function PlayerActions() {
             yLoc = mousePos().y
             xLoc = mousePos().x
 
+            console.log("xLocation")
             console.log(yLoc)
+            console.log("yLocation")
             console.log(xLoc)
         })
             
