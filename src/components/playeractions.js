@@ -117,6 +117,10 @@ export default function PlayerActions() {
         area()
     ])
     // camera position follow player
+
+    var xLoc = 0
+    var yLoc = 0
+    
     player.action(() => {
         // console.log(camPos())
         camPos(player.pos);
