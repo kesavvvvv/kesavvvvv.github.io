@@ -167,7 +167,7 @@ export default function PlayerActions() {
         
         
         
-        })
+        
 
 
         // if(pipe1.isTouching(player)) {
