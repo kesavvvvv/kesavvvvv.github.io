@@ -82,15 +82,6 @@ export default function Level() {
                 console.log("inside jump")
                 player.jump()
             }
-        })
-    })
-
-    yClick = 0
-    yRelease = 0
-    mouseClick(() => {  
-        yClick = mousePos().y
-        mouseRelease(() => {
-            yRelease = mousePos().y
             if(yRelease > yClick + 350) {
                 
                 if(pipe1.isTouching(player)) {
@@ -108,6 +99,7 @@ export default function Level() {
             }
         })
     })
+
 
     //Press q to go back to home screen
     keyPress('q', () => {
