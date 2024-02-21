@@ -155,34 +155,34 @@ export default function PlayerActions() {
             
         })
 
-        yClick = 0
-        yRelease = 0
-        mouseClick(() => {  
-            yClick = mousePos().y
-            mouseRelease(() => {
-                yRelease = mousePos().y
-                if(yRelease > yClick + 350) {
-                    if(pipe.isTouching(player)) {
-                        window.open("http://github.com/kesavvvvv",'_blank')
-                    }
-                    if(pipe5.isTouching(player)) {
-                        window.open("https://www.linkedin.com/in/kesavvvvv",'_blank')
-                    }
-                    if(pipe1.isTouching(player)) {
-                        go('about')
-                    }
-                    if(pipe2.isTouching(player)) {
-                        go('projects')
-                    }
-                    if(pipe3.isTouching(player)) {
-                        go('skills')
-                    }
-                    if(pipe4.isTouching(player)) {
-                        go('contact')
-                    }
-                }
-            })
-        })
+        // yClick = 0
+        // yRelease = 0
+        // mouseClick(() => {  
+        //     yClick = mousePos().y
+        //     mouseRelease(() => {
+        //         yRelease = mousePos().y
+        //         if(yRelease > yClick + 350) {
+        //             if(pipe.isTouching(player)) {
+        //                 window.open("http://github.com/kesavvvvv",'_blank')
+        //             }
+        //             if(pipe5.isTouching(player)) {
+        //                 window.open("https://www.linkedin.com/in/kesavvvvv",'_blank')
+        //             }
+        //             if(pipe1.isTouching(player)) {
+        //                 go('about')
+        //             }
+        //             if(pipe2.isTouching(player)) {
+        //                 go('projects')
+        //             }
+        //             if(pipe3.isTouching(player)) {
+        //                 go('skills')
+        //             }
+        //             if(pipe4.isTouching(player)) {
+        //                 go('contact')
+        //             }
+        //         }
+        //     })
+        // })
 
         // if(pipe.isTouching(player)) {
         //     keyPress('down', () => {
