@@ -162,7 +162,7 @@ export default function PlayerActions() {
             //     go('contact')
             // }
 
-        console.log(pipe1.pos.x)
+        console.log(mousePos().y)
         console.log(pipe1.pos.y)
         
         
