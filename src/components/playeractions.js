@@ -149,10 +149,10 @@ export default function PlayerActions() {
             yLoc = mousePos().y
             xLoc = mousePos().x
 
-            // console.log("xLocation")
-            // console.log(yLoc)
-            // console.log("yLocation")
-            // console.log(xLoc)
+            console.log("xLocation")
+            console.log(yLoc)
+            console.log("yLocation")
+            console.log(xLoc)
 
             if(xLoc > 30 && yLoc > 750 && xLoc < 173 && yLoc < 800) {
                 if(pipe1.isTouching(player)) {
