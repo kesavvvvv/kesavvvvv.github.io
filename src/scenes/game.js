@@ -85,6 +85,30 @@ export default function Level() {
         })
     })
 
+    yClick = 0
+    yRelease = 0
+    mouseClick(() => {  
+        yClick = mousePos().y
+        mouseRelease(() => {
+            yRelease = mousePos().y
+            if(yRelease > yClick + 350) {
+                
+                if(pipe1.isTouching(player)) {
+                    go('about')
+                }
+                if(pipe2.isTouching(player)) {
+                    go('projects')
+                }
+                if(pipe3.isTouching(player)) {
+                    go('skills')
+                }
+                if(pipe4.isTouching(player)) {
+                    go('contact')
+                }
+            }
+        })
+    })
+
     //Press q to go back to home screen
     keyPress('q', () => {
         go("home")
