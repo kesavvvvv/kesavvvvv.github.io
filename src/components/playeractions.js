@@ -1,4 +1,4 @@
-let player;
+let player, pipe1;
 
 export default function PlayerActions() {
     player = add([
@@ -268,7 +268,7 @@ export default function PlayerActions() {
     });
     
 
-    return player
+    return player, pipe1
 }
 
-export {player}
+export {player, pipe1}
