@@ -122,7 +122,8 @@ export default function PlayerActions() {
     var yClick_1 = 0
     var yRelease_1 = 0
 
-    
+    var pipe_1_touched = False
+    var start_pipe_1 = 0
     
     player.action(() => {
         // console.log(camPos())
@@ -162,10 +163,17 @@ export default function PlayerActions() {
             //     go('contact')
             // }
 
-        console.log(mousePos().y)
-        console.log(pipe1.pos.y)
         
-        
+        if(pipe1.isTouching(player)) {
+            pipe_1_touched = True
+            start_pipe_1 = Date.now()
+        }
+
+        if(pipe_1_touched && pipe1.isTouching(player) != True && (Date.now() - start_pipe_1) >= 5000) {
+            go('about')
+            start_pipe_1 = 0
+            pipe_1_touched = False
+        }
         
         
 
