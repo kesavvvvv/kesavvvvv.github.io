@@ -171,18 +171,18 @@ export default function PlayerActions() {
             console.log(pipe_1_touched)
         }
 
-        if(pipe_1_touched && pipe1.isTouching(player) != true) {
-            console.log("player left pipe")
+        if(pipe_1_touched) {
             if((Date.now() - start_pipe_1) >= 5000) {
-                console.log("player stayed in pipe for 5 sec")
                 go('about')
                 start_pipe_1 = 0
                 pipe_1_touched = false
             }
-            else {
-                console.log("player stayed in pipe for less than 5 sec")
+            if(pipe1.isTouching(player) != true) {
+                console.log("player left pipe")
+                console.log("player stayed in pipe for 5 sec")
                 start_pipe_1 = 0
                 pipe_1_touched = false
+                
             }
         }
 
