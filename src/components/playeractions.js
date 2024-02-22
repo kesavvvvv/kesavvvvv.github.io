@@ -164,7 +164,7 @@ export default function PlayerActions() {
             // }
 
         
-        if(pipe1.isTouching(player)) {
+        if(pipe_1_touched == false && pipe1.isTouching(player)) {
             pipe_1_touched = true
             start_pipe_1 = Date.now()
             console.log("player touched pipe")
