@@ -204,7 +204,7 @@ export default function PlayerActions() {
 
         if(pipe_2_touched) {
             if((Date.now() - start_pipe_2) >= 5000) {
-                go('project')
+                go('projects')
                 start_pipe_2 = 0
                 pipe_2_touched = false
             }
