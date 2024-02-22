@@ -1,13 +1,13 @@
 export default function Text() {
 
     add([
-        text("Hi! My name is Kesav Ravichandran. Welcome to my profile game.", {size: 30}), 
+        text("Hi! My name is Kesav Ravichandran. Welcome to my portfolio game!.", {size: 30}), 
         origin('left'),
         layer('ui'),
         pos(250)
     ])
     add([
-        text("Use the right and up arrow keys to move around using the keyboard. Press down arrow key to enter the pipe.", {size: 30}), 
+        text("Use the right and up arrow keys to move around using the keyboard. Press down arrow key or stay on it for 5 seconds to enter the pipe.", {size: 30}), 
         origin('left'),
         layer('ui'),
         // pos(1300, 250)
@@ -15,7 +15,7 @@ export default function Text() {
     ])
 
     add([
-        text("Tap to move and swipe up to jump if you are on mobile.", {size: 30}), 
+        text("Tap to move and swipe up to jump if you are on mobile. Stay on the pipe for 5 seconds to enter.", {size: 30}), 
         origin('left'),
         layer('ui'),
         // pos(2500, 250)
