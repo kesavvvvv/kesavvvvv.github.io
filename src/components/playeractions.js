@@ -47,7 +47,8 @@ export default function PlayerActions() {
         player.move(250, 0)
         
         if(run%10 == 0)
-            player.use(sprite('run' + run))
+            if(keyIsDown("shift") != true)
+                player.use(sprite('run' + run))
             // player.changeSprite('run' + run)
         if(run<100){
             run = run + 1
@@ -116,6 +117,7 @@ export default function PlayerActions() {
         body(), 
         area()
     ])
+
     // camera position follow player
 
     
@@ -137,9 +139,11 @@ export default function PlayerActions() {
     player.action(() => {
         // console.log(camPos())
         camPos(player.pos);
-        if(player.pos.y > 1500) {
+        if(player.pos.y > 3700 || player.pos.x > 4000) {
             go('game')
         }
+
+
 
         keyPress('down', () => {
             
@@ -330,6 +334,8 @@ export default function PlayerActions() {
         // //         window.open("http://www.google.com");
         // //     })
         // // }
+
+        
     });
     
 
