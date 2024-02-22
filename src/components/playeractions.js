@@ -124,6 +124,15 @@ export default function PlayerActions() {
 
     var pipe_1_touched = false
     var start_pipe_1 = 0
+
+    var pipe_2_touched = false
+    var start_pipe_2 = 0
+
+    var pipe_3_touched = false
+    var start_pipe_3 = 0
+
+    var pipe_4_touched = false
+    var start_pipe_4 = 0
     
     player.action(() => {
         // console.log(camPos())
@@ -182,6 +191,72 @@ export default function PlayerActions() {
                 console.log("player stayed in pipe for 5 sec")
                 start_pipe_1 = 0
                 pipe_1_touched = false
+                
+            }
+        }
+        
+        if(pipe_2_touched == false && pipe2.isTouching(player)) {
+            pipe_2_touched = true
+            start_pipe_2 = Date.now()
+            console.log("player touched pipe")
+            console.log(pipe_2_touched)
+        }
+
+        if(pipe_2_touched) {
+            if((Date.now() - start_pipe_2) >= 5000) {
+                go('about')
+                start_pipe_2 = 0
+                pipe_2_touched = false
+            }
+            if(pipe2.isTouching(player) != true) {
+                console.log("player left pipe")
+                console.log("player stayed in pipe for 5 sec")
+                start_pipe_2 = 0
+                pipe_2_touched = false
+                
+            }
+        }
+
+        if(pipe_3_touched == false && pipe3.isTouching(player)) {
+            pipe_3_touched = true
+            start_pipe_3 = Date.now()
+            console.log("player touched pipe")
+            console.log(pipe_3_touched)
+        }
+
+        if(pipe_3_touched) {
+            if((Date.now() - start_pipe_3) >= 5000) {
+                go('about')
+                start_pipe_3 = 0
+                pipe_3_touched = false
+            }
+            if(pipe3.isTouching(player) != true) {
+                console.log("player left pipe")
+                console.log("player stayed in pipe for 5 sec")
+                start_pipe_3 = 0
+                pipe_3_touched = false
+                
+            }
+        }
+
+        if(pipe_4_touched == false && pipe4.isTouching(player)) {
+            pipe_4_touched = true
+            start_pipe_4 = Date.now()
+            console.log("player touched pipe")
+            console.log(pipe_4_touched)
+        }
+
+        if(pipe_4_touched) {
+            if((Date.now() - start_pipe_4) >= 5000) {
+                go('about')
+                start_pipe_4 = 0
+                pipe_4_touched = false
+            }
+            if(pipe4.isTouching(player) != true) {
+                console.log("player left pipe")
+                console.log("player stayed in pipe for 5 sec")
+                start_pipe_4 = 0
+                pipe_4_touched = false
                 
             }
         }
