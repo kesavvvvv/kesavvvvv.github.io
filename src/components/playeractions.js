@@ -122,7 +122,7 @@ export default function PlayerActions() {
     var yClick_1 = 0
     var yRelease_1 = 0
 
-    var pipe_1_touched = False
+    var pipe_1_touched = false
     var start_pipe_1 = 0
     
     player.action(() => {
@@ -165,14 +165,14 @@ export default function PlayerActions() {
 
         
         if(pipe1.isTouching(player)) {
-            pipe_1_touched = True
+            pipe_1_touched = true
             start_pipe_1 = Date.now()
         }
 
-        if(pipe_1_touched && pipe1.isTouching(player) != True && (Date.now() - start_pipe_1) >= 5000) {
+        if(pipe_1_touched && pipe1.isTouching(player) != true && (Date.now() - start_pipe_1) >= 5000) {
             go('about')
             start_pipe_1 = 0
-            pipe_1_touched = False
+            pipe_1_touched = false
         }
         
         
