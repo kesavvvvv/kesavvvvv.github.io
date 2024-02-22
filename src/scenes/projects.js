@@ -67,7 +67,22 @@ export default function Projects() {
 
     // }
     
-
+    var yClick = 0
+    var yRelease = 0
+    mouseClick(() => {  
+        yClick = mousePos().y
+        console.log("inside mouse click")
+        console.log(yClick)
+        mouseRelease(() => {
+            yRelease = mousePos().y
+            console.log("inside mouse release")
+            console.log(mouseRelease)
+            if(yRelease < yClick - 350) {
+                console.log("inside jump")
+                player.jump()
+            }
+        })
+    })
     
 
     //Press q to go back to home screen
