@@ -204,7 +204,7 @@ export default function PlayerActions() {
 
         if(pipe_2_touched) {
             if((Date.now() - start_pipe_2) >= 5000) {
-                go('about')
+                go('project')
                 start_pipe_2 = 0
                 pipe_2_touched = false
             }
@@ -226,7 +226,7 @@ export default function PlayerActions() {
 
         if(pipe_3_touched) {
             if((Date.now() - start_pipe_3) >= 5000) {
-                go('about')
+                go('skills')
                 start_pipe_3 = 0
                 pipe_3_touched = false
             }
@@ -248,7 +248,7 @@ export default function PlayerActions() {
 
         if(pipe_4_touched) {
             if((Date.now() - start_pipe_4) >= 5000) {
-                go('about')
+                go('contact')
                 start_pipe_4 = 0
                 pipe_4_touched = false
             }
