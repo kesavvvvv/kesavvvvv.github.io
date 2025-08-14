@@ -7,7 +7,7 @@ export default function EduText() {
         pos(250)
     ])
     add([
-        text("I am a software developer engineer with 1.5 years of experience as a backend Java developer", {size: 30}), 
+        text("I am a software developer engineer with 1.5 years of experience.", {size: 30}), 
         origin('left'),
         layer('ui'),
         // pos(1300, 250)
