@@ -1,13 +1,13 @@
 export default function EduText() {
 
     add([
-        text("Languages: Java, Python, C, C++, JavaScript, C#", {size: 30}), 
+        text("Programming Languages: C++, Python, JavaScript, Swift", {size: 30}), 
         origin('left'),
         layer('ui'),
         pos(250)
     ])
     add([
-        text("Frameworks: Spring, Hibernate, Maven, JUnit, Node.js, React Native, Angular, Pytorch, Keras, Robot Operating System, Ansys HFSS, Electromagnetic CAD", {size: 30}), 
+        text("Developer Tools: REST APIs, Spring Boot, Firebase, MongoDB, Elasticsearch, Kafka, Docker, Kubernetes, Git, Linux, CUDA, GDB, Valgrind, CMake, Perf", {size: 30}), 
         origin('left'),
         layer('ui'),
         // pos(1300, 250)
@@ -15,7 +15,7 @@ export default function EduText() {
     ])
 
     add([
-        text("Developer Tools: Git, Docker, AWS, Elastic Search, Android Studio, Unity, MongoDB, SQL", {size: 30}), 
+        text("AI & ML: PyTorch, Computer Vision, LangChain, Google ADK, BLIP, FAISS", {size: 30}), 
         origin('left'),
         layer('ui'),
         // pos(2500, 250)
