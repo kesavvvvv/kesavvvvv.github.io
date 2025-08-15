@@ -15,7 +15,7 @@ export default function Text() {
     ])
 
     add([
-        text("Tap to move and swipe up to jump if you are on mobile. Stay on the pipe for 5 seconds to enter.", {size: 30}), 
+        text("Tap to move and swipe up to jump if you are on mobile.", {size: 30}), 
         origin('left'),
         layer('ui'),
         // pos(2500, 250)
