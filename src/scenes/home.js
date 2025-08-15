@@ -2,7 +2,7 @@ export default function Home() {
     console.log("Home Page!")
     layers(['bg', 'obj', 'ui'], 'obj')
     add([
-        text("Hi, I'm Kesav! Welcome to my website. Press any key to continue.", 8), 
+        text("Hi, I'm Kesav! Welcome to my website. Press any key to continue.", 4), 
         origin('center'),
         pos(width()/2, height()/2)
     ])
